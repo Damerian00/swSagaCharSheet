@@ -1,0 +1,216 @@
+<h1 class="name">{{charName}}</h1>
+<section class="container basics">
+    <div class="row">
+        <label class="col-1 flex-1">Class:</label>
+        <p class="col-4 border flex-12">Soldier/Independent Droid</p>
+    </div>
+    <div class="row">
+        <div class="col-6 basics-col">    
+            <label class="col-2">Level:</label>
+            <p class="border rounded p-2 m-1">3</p>
+            <p class="border rounded p-2 m-1">1</p>
+        </div>
+        <div class="col-6 basics-col">
+            <label class="col-2">Background:</label>
+            <p class="border rounded p-2 m-1">Hypocrisy</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 basics-col">    
+            <label class="col-2">Species:</label>
+            <p class="border rounded p-2 m-1">Human</p>
+        </div>
+        <div class="col-6 basics-col">
+            <label class="col-2">Destiny:</label>
+            <p class="border rounded p-2 m-1">Whatever I choose!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 basics-col">    
+            <label class="col-2">Gender:</label>
+            <p class="border rounded p-2 m-1">M</p>
+        </div>
+        <div class="col-6 basics-col">
+            <label class="col-2">Size:</label>
+            <p class="border rounded p-2 m-1">Medium</p>
+        </div>
+    </div>
+</section>
+<aside class="contain">
+<section class="attr">
+    <div class="table">
+        <h6>Attributes</h6>
+        <tbody>
+            <tr *ngFor="let attribute of attributes; index as i">
+                <td class="shadow">{{attribute.att_symbol}}<span>{{attribute.att_name}}</span></td>
+                <td  class="numbs"><p>{{attribute.att_amount}}</p></td>
+                <td class="numbs"><p>{{attribute.att_modifier}}</p></td>
+            </tr>
+        </tbody>
+    </div>
+</section>
+<section class="chars">
+    <div class="tb">
+        <div class="hitpoints">
+            <h6 class="hp">Hit Points</h6>
+            <label>Current</label>
+            <input class="smallBox" type="number" min="0" placeholder="{{hp_current}}">
+            <span>/</span>
+            <label>Total</label>
+            <input class="smallBox" type="number" min="0" value="{{hp_total}}">
+        </div>
+        <div class="threshold">
+            <h6>Threshold</h6>
+            <label>Total</label>
+            <input class="smallBox" type="number" min="0" value="{{th_total}}">
+            <span>=</span>
+            <label>Defense</label>
+            <select id="defense_type">
+                <option value= "Fortitue">Fortitude</option>
+                <option value="Will">Will</option>
+            </select>
+            <label>Misc.</label>
+            <input class = "smallBox" type="number" min="0" placeholder="{{th_misc}}">
+        </div>
+        <div class="reductions">
+            <tr>
+                <label>Damage Reduction</label>
+                <input class="smallBox" type="number" min="0" placeholder="{{damageReduction}}">
+            </tr>
+            <tr>
+                <label>Shield Rating</label>
+                <input class="smallBox" type="number" min="0" placeholder="{{shieldRating_curr}}">
+                <span>/</span>
+                <input class="smallBox" type="number" min="0" value="{{shieldRating_max}}">
+            </tr>
+            <tr>
+                <label>Immune</label>
+                <input type="text" placeholder="{{immunity}}">
+            </tr>
+        </div>
+    </div>
+    <div class="tb conditions">
+        <h6>Condition</h6>
+        <input type="radio" id="normal" name="condition" value="normal">
+        <label for="normal">Normal</label><br>
+        <input type="radio" id="negOne" name="condition" value="-1">
+        <label for="negOne">-1</label><br>  
+        <input type="radio" id="negTwo" name="condition" value="-2">
+        <label for="negTwo">-2</label><br>
+        <input type="radio" id="negFive" name="condition" value="-5">
+        <label for="negFive">-5</label><br>
+        <input type="radio" id="negTen" name="condition" value="-10">
+        <label for="negTen">-10</label><br>  
+        <input type="radio" id="helpless" name="condition" value="helpless">
+        <label for="helpless">Helpless</label><br><br>
+
+    </div>
+</section>
+<section class="adds">
+    <div class="tb">
+        <tr class="fndPoints">
+               <h6>Force Points</h6>
+                <h6>Destiny Points</h6>              
+        </tr>
+        <tr class="fndStats">
+            <div class="forcePoints">
+                <input class="smallBox" type="number">
+                <input class="smallBox" type="number">
+            </div>
+            <div class="destinyPoints">
+                <input class="smallBox" type="number">
+            </div>
+        </tr>
+        <tr class="fndPoints">
+            <h6>BAB</h6>
+            <h6>Speed</h6>
+            <h6>Dak Side Points</h6>
+        </tr>
+    </div>
+</section>
+</aside>
+<main class="contain">
+    <section class="action contain">
+        <div class="side1">
+            <h6>Defenses</h6>
+            <div class="tb">
+                <tr class="headers colm">
+                    <p></p>
+                    <p class="shadow double">Reflex</p>
+                    <p class="shadow">Fortitude</p>
+                    <p class="shadow">Will</p>
+                </tr>
+                <tr class="total colm">
+                    <p>Total</p>
+                    <p class = "numbs">{{reflex_total}}</p>
+                    <p class = "shadow">Flatfooted</p>
+                    <p class = "numbs">{{fortitude_total}}</p>
+                    <p class = "numbs">{{will_total}}</p>
+                </tr>
+                <tr class="adds colm">
+                    <p class="blank">blank</p>
+                    <p>= 10 +</p>
+                    <p class="numbs">{{flatfoot}}</p>
+                    <p>= 10 +</p>
+                    <p>= 10 +</p>
+                </tr>
+                <tr class="la colm">
+                    <p>Level/Armor</p>
+                    <p class="numbs">{{reflex_armor}}</p>
+                    <p class="numbs">{{fortitude_armor}}</p>
+                    <p class="blank">blank</p>
+                    <p class="numbs">{{will_armor}}</p>
+                   
+                </tr>
+                <tr class="class colm">
+                    <p>Class</p>
+                    <input class="smallBox" type="number" min="0" placeholder="{{reflex_class}}">
+                    <p class="blank">blank</p>
+                    <input class="smallBox" type="number" min="0" placeholder="{{fortitude_class}}">
+                    <input class="smallBox" type="number" min="0" placeholder="{{will_class}}">
+                  
+                </tr>
+                <tr class="mod colm">
+                    <p>Mod</p>
+                    <select id="reflexMod_type">
+                        <option value= "STR">STR</option>
+                        <option value="DEX">DEX</option>
+                        <option value= "DEXmax armor">DEX (max armor)</option>
+                        <option value="CON">CON</option>
+                        <option value= "INT">INT</option>
+                        <option value= "WIS">WIS</option>
+                        <option value="CHA">CHA</option>
+                    </select>                                 
+                    <p></p>
+                    <select id="fortitudeMod_type">
+                        <option value= "STR">STR</option>
+                        <option value="DEX">DEX</option>
+                        <option value="CON">CON</option>
+                        <option value= "INT">INT</option>
+                        <option value= "WIS">WIS</option>
+                        <option value="CHA">CHA</option>
+                    </select>
+                    <select id="willMod_type">
+                        <option value= "STR">STR</option>
+                        <option value="DEX">DEX</option>
+                        <option value="CON">CON</option>
+                        <option value= "INT">INT</option>
+                        <option value= "WIS">WIS</option>
+                        <option value="CHA">CHA</option>
+                    </select>
+                </tr>
+                <tr class="will colm">
+                    <p>Misc.</p>
+                    <input class="smallBox" type="number" min="0" placeholder="{{reflex_misc}}">
+                    <input class="smallBox" type="number" min="0" placeholder="{{flatfoot_misc}}">
+                    <input class="smallBox" type="number" min="0" placeholder="{{fortitude_misc}}">
+                    <input class="smallBox" type="number" min="0" placeholder="{{will_misc}}">
+                </tr>
+            </div>
+        </div>
+        <div class="side2">
+            <h6>Skills</h6>
+        </div>
+    </section>
+
+</main>

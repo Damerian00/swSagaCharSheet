@@ -1,0 +1,272 @@
+$shadow: rgb(121, 120, 120);
+
+.shadow{
+    background-color: $shadow;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.flex-1{
+    flex:1;
+}
+.flex-12 {
+    flex:12;
+}
+.flex-2{
+    flex:2;
+}
+h6{
+    text-align: center; color:white; background-color: black;width:100%;padding: .5vh .5rem;border-radius:10px;
+}
+.contain{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.basics-col{
+    p{display: inline-block;}
+}
+
+.attr{
+    margin: 3vh 2vw;
+    width:calc(100%/6);
+    flex:1;
+    .table{
+       
+    }
+    tr{
+        display: flex;
+        
+    }
+    .numbs{
+        text-align: center;
+        border: 1px solid black;
+        margin: .2rem 1rem;
+        padding:0 2rem;
+        display: flex;
+        align-items: center;
+    }
+        p{
+            margin: 0;
+    }
+    .shadow{
+        text-align: justify;
+        border:none;
+        flex-direction: column;
+        flex:2;
+        padding-right: 2rem;
+        
+    }
+
+    span{
+        display:block; font-size:.75rem;
+    }
+}
+.chars{
+    display: flex;
+    flex:1;
+    margin: 1vh 2vw;
+    .tb{
+        margin: 1rem;
+    }
+    .hitpoints{
+        margin-bottom: .5rem;
+             
+        h6{width:calc(100%/1.5);}
+    }
+    input{
+        margin-left:.5rem;
+    }
+    select{margin: 0 .5rem;}
+    span{
+        margin: 0 1rem;
+    }
+    .reductions{
+        display: flex;
+        flex-direction: column;
+        tr{
+            margin: .25rem 0;
+        }
+
+    }
+}
+
+.conditions{
+    label{
+        margin-left: .5rem;
+    }
+}
+
+.smallBox{
+    width: 3rem;
+    margin-left: 1rem;
+    
+
+}
+.adds{
+    flex:1;
+    margin: 3vh 2vw;
+    tr{
+        margin: .25rem 0;
+    }
+    .fndPoints{
+        background-color: black;
+        height:3vh;
+        border-radius:10px;
+        display: flex;
+        h6{
+            
+            display: inline;
+            margin-left:1.5rem;
+        }
+    }
+   
+    .fndStats{
+        display: flex;
+        justify-content: space-around;
+
+        .forcePoints{
+            input{
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+.action{
+    width: 100%;
+    .tb {
+        display:flex;
+        justify-content: space-evenly;
+    }
+    tr{
+        flex:1;
+        p{
+            text-align:center;
+        }
+    }
+    .numbs{
+        text-align: center;
+        border: 1px solid black;
+        margin: .2rem 1rem;
+        padding:0 1rem;
+        display: flex;
+        align-items: center;
+    }
+    .side1{
+        flex:1;
+        margin: 1rem;
+        .blank{
+            color:white;
+        }
+        .colm{
+            display: flex;
+            flex-direction: column;
+            p{
+                margin:.5rem;
+            }
+            p:first-child{
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .headers{
+            flex:2;
+            p:first-child{
+              margin:0;  
+            }
+            p{
+               justify-content:center;
+               flex:1;
+               margin:0;
+            }
+            .shadow{
+                display:flex;
+                padding: 0;
+                margin:0;
+                justify-content: flex-start;
+                align-items: center;
+                
+            }
+            .double{
+                flex:2;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                
+            }
+        }
+        
+            .total, .adds, .la, .class, .mod, .will{
+    
+                p, input, select{
+                    flex:1;
+                    text-align: center;
+                }
+            }
+        .total{
+            
+            p{
+                margin:.5rem;
+              
+            }
+            p:first-child{
+                margin-bottom: 1rem;
+            }
+            .shadow{
+                text-align: justify;
+                padding: .5rem 0;
+                margin:-.5rem;
+                display:flex;
+                justify-content: flex-start;
+                align-items: center;
+                
+            }
+        }
+
+
+        // }
+        // .flatfoot_stats{
+        //     display: flex;
+        //     justify-content: space-around;
+
+        //     input{
+        //         margin-left: 11rem;
+        //     }            
+        //     select{
+        //         font-size:.75rem;
+        //     }
+        //     div{
+                
+        //         margin-left:-1rem;
+        //        p{
+        //            display: inline-block;
+        //            font-size:.9rem;
+        //        }
+        //        p:first-child{
+        //            content: "this is space that I'm filler";
+        //            color: $shadow;
+        //            flex:1;
+        //            background-color: $shadow;
+        //            margin-left:1.2rem;
+        //            padding-right:2rem;
+        //        }
+        //     }
+        //     .numbs{
+        //         margin-left: 3rem;
+        //     }
+        //     .shadow{
+        //         text-align: justify;
+        //         padding: 1rem 3rem 0 .5rem;
+        //         margin:0 0  0 0rem;
+                
+        //     }
+        
+
+        // }
+
+    }
+    .side2{
+        flex:1;
+        margin: 1rem;
+    }
+}
