@@ -5,11 +5,18 @@
 .tb{
     flex:1;
     margin: 0 2vw;
+    display:flex;
+}
+
+
+.smallBox{
+    width: 3rem;
+    margin-left: 1rem;
 }
 .colm{
     display: flex;
     flex-direction: column;
-
+ 
     .wornArm, .talents{
         display: flex;
         justify-content: center;
@@ -20,10 +27,39 @@
     }
     .talents{
         justify-content: space-around;
+        align-items: flex-end;
         p{
             display: flex;
             flex-direction: column;
-            font-size: .75rem;
+            font-size: .70rem;
+            margin: .5rem;
         }
     }
 }
+.top, .bot{
+    display: flex;
+    tr{
+        display: flex;
+    }
+    p{
+        font-size: .70rem;
+            margin: .5rem;
+            text-align: center;;
+    }
+}
+.top{
+    align-items: flex-end;
+    margin-bottom:.5rem;
+}
+.bot{
+    margin-bottom:.5rem;
+    tr{
+        display: flex;
+    }
+}
+.textbox{
+    display: flex;
+    margin:.5rem auto;
+    justify-content: center;
+}
+

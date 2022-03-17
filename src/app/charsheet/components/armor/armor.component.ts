@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-armor',
+  selector: 'armor',
   templateUrl: './armor.component.html',
   styleUrls: ['./armor.component.scss']
 })

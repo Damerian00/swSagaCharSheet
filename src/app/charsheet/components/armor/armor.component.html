@@ -21,22 +21,45 @@
             </td>
         </tr>
     </div>
-    <div class="tb">
-        <tr class="colm">
-            <p>Ref Def Bonus</p>
-            <input type="number" min="0" placeholder="0">
-        </tr>
-        <tr>
-            <p>Fort Def Bonus</p>
-            <input type="number" min="0" placeholder="0">
-        </tr>
+    <div class="tb colm">
+        <div class="top tb">
+            <tr class="colm">
+                <p>Ref Def Bonus</p>
+                <input class="smallBox" type="number" min="0" placeholder="0">
+            </tr>
+            <tr class="colm">
+                <p>Fort Def Bonus</p>
+                <input class="smallBox" type="number" min="0" placeholder="0">
+            </tr>
+            <tr class="colm">
+                <p>Max Dex Bonus</p>
+                <input class="smallBox" type="number" min="0" placeholder="0">
+            </tr>
+            <tr class="colm">
+                <p>Speed</p>
+                <input class="smallBox" type="number" min="0" placeholder="0">
+            </tr>
+        </div>
+        <div class="bot tb colm">
+            <tr>
+               <p>Armor Type</p>
+               <p>Helmet Package </p>
+            </tr>
+            <tr>
+                <select id="armorType_type">
+                    <option value= "Light">Light</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Heavy">Heavy</option>
+                </select>
+                <select id="helmPackage_type">
+                    <option value= "None">None</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Superior">Superior</option>
+                </select>
+            </tr>
+        </div>
     </div>
-
-
-
-
-
-
-
-
-</section>
+  </section>
+  <div class="textbox">
+      <textarea id="armor_notes" name="armor_notes" rows="2" cols="100" placeholder="Armor Notes"></textarea>
+  </div>
