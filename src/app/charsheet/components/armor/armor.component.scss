@@ -1,0 +1,29 @@
+.armor{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tb{
+    flex:1;
+    margin: 0 2vw;
+}
+.colm{
+    display: flex;
+    flex-direction: column;
+
+    .wornArm, .talents{
+        display: flex;
+        justify-content: center;
+
+        input{
+            margin:.5rem;
+        }
+    }
+    .talents{
+        justify-content: space-around;
+        p{
+            display: flex;
+            flex-direction: column;
+            font-size: .75rem;
+        }
+    }
+}

@@ -8,6 +8,7 @@ import { BioComponent } from './bio/bio.component';
 import { CharsheetComponent } from './charsheet/charsheet.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './charsheet/components/skills/skills.component';
+import { ArmorComponent } from './charsheet/components/armor/armor.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SkillsComponent } from './charsheet/components/skills/skills.component'
     BioComponent,
     CharsheetComponent,
     HomeComponent,
-    SkillsComponent
+    SkillsComponent,
+    ArmorComponent
   ],
   imports: [
     BrowserModule,
