@@ -1,0 +1,53 @@
+
+<section class="skills">
+<tr class="colm flex-spread" >
+    <td><p class="blank">blank</p></td>
+    <td  class="name" *ngFor="let skill of skills; index as i">
+        <p>{{skill.name}}</p>
+    </td>
+<tr class="colm">
+        <td><p>Total</p></td>
+        <td class="total" *ngFor="let skill of skills; index as i">
+            <p>{{skill.total}}</p>
+        </td>
+</tr>
+<tr class="colm">
+    <td><p class="blank">blank</p></td>
+    <td *ngFor="let skill of skills; index as i">
+        <p>=</p>
+    </td>
+</tr>
+    <tr class="colm">
+        <td><p>Mod</p></td>
+        <td  *ngFor="let skill of skills; index as i">
+            <select id="skillMod_type">
+                <option value= "STR">STR</option>
+                <option value="DEX">DEX</option>
+                <option value="CON">CON</option>
+                <option value= "INT">INT</option>
+                <option value= "WIS">WIS</option>
+                <option value="CHA">CHA</option>
+            </select>
+        </td>
+    </tr>
+<tr class="colm">
+    <td><p>T</p></td>
+    <td  *ngFor="let skill of skills; index as i">
+       <p><input type="checkbox" id="trained" name="trained" value="trained"></p>
+    </td>
+</tr>
+<tr class="colm">
+    <td>
+        <p>F</p>
+    </td>
+    <td  *ngFor="let skill of skills; index as i">
+        <input type="checkbox" id="focused" name="focused" value="focused">
+    </td>
+</tr>
+<tr class="colm">
+    <td><p>Misc</p></td>
+    <td  *ngFor="let skill of skills; index as i">
+      <input class="smallBox" type="number" min="0" >
+    </td>
+</tr>
+</section>

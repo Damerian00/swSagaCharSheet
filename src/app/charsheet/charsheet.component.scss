@@ -5,6 +5,30 @@ $shadow: rgb(121, 120, 120);
     border-radius: 10px;
     font-weight: 600;
 }
+.blank{
+    color:white;
+}
+.flex-spread{
+    display:flex;
+    justify-content: space-around;
+   
+ 
+}
+.grap {
+    tr{
+        p{
+            margin:0;
+            text-align: center;
+        }
+    }
+    select, input{
+        height:24px;
+    }
+}
+.flex-between{
+    display:flex;
+    justify-content: space-between;
+}
 .flex-1{
     flex:1;
 }
@@ -22,16 +46,36 @@ h6{
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.smallBox{
+    width: 3rem;
+    margin-left: 1rem;
+    
+
+}
+.colm{
+    display: flex;
+    flex-direction: column;
+    p{
+        margin:.5rem;
+    }
+    p:first-child{
+        margin-bottom: 1rem;
+    }
+}
 .basics-col{
     p{display: inline-block;}
 }
 
 .attr{
     margin: 3vh 2vw;
-    width:calc(100%/6);
     flex:1;
-    .table{
-       
+    h6{
+        width:100%;
+    }
+    .tb{
+       p{
+           height: 30px;
+       }
     }
     tr{
         display: flex;
@@ -96,12 +140,8 @@ h6{
     }
 }
 
-.smallBox{
-    width: 3rem;
-    margin-left: 1rem;
-    
 
-}
+
 .adds{
     flex:1;
     margin: 3vh 2vw;
@@ -130,6 +170,14 @@ h6{
             }
         }
     }
+    .grap{
+   
+}
+    .grap_tb{
+        display: flex;
+        
+
+    }
 }
 .action{
     width: 100%;
@@ -154,19 +202,8 @@ h6{
     .side1{
         flex:1;
         margin: 1rem;
-        .blank{
-            color:white;
-        }
-        .colm{
-            display: flex;
-            flex-direction: column;
-            p{
-                margin:.5rem;
-            }
-            p:first-child{
-                margin-bottom: 1rem;
-            }
-        }
+      
+       
         
         .headers{
             flex:2;

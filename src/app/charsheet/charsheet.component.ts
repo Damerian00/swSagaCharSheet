@@ -82,6 +82,7 @@ will_total: number = 20;
 will_armor: number = 7;
 will_class: number = 4;
 will_misc: number = 0;
+grapple_total: number = 7;
 
 
   constructor() { }

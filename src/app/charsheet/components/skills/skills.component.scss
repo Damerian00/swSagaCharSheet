@@ -1,0 +1,27 @@
+
+.skills{
+    display:flex;
+    justify-content: space-evenly;
+}
+select{
+    max-height: 24px;
+    font-size:.75rem;
+} 
+.smallBox{
+    width: 3rem;
+    max-height: 24px;     
+}
+
+.blank{
+    color:white;
+}
+.colm{
+    display: flex;
+    flex-direction: column;
+    p{
+       margin:0; 
+    }
+    p:first-child{
+       
+    }
+}

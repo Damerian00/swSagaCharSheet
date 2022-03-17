@@ -7,46 +7,54 @@
     <div class="row">
         <div class="col-6 basics-col">    
             <label class="col-2">Level:</label>
-            <p class="border rounded p-2 m-1">3</p>
-            <p class="border rounded p-2 m-1">1</p>
+            <p class="col-1 border rounded m-1 text-center">3</p>
+            <p class="col-1 border rounded m-1 text-center">1</p>
         </div>
         <div class="col-6 basics-col">
-            <label class="col-2">Background:</label>
-            <p class="border rounded p-2 m-1">Hypocrisy</p>
+            <label class="col-5">Background:</label>
+            <p class="col-5 border rounded m-1 text-center">Hypocrisy</p>
         </div>
     </div>
     <div class="row">
         <div class="col-6 basics-col">    
-            <label class="col-2">Species:</label>
-            <p class="border rounded p-2 m-1">Human</p>
+            <label class="col-5">Species:</label>
+            <p class="col-5 border rounded p-2 m-1 text-center">Human</p>
         </div>
         <div class="col-6 basics-col">
-            <label class="col-2">Destiny:</label>
-            <p class="border rounded p-2 m-1">Whatever I choose!</p>
+            <label class="col-5">Destiny:</label>
+            <p class=" col-5 border rounded p-2 m-1 text-center">Whatever I choose!</p>
         </div>
     </div>
     <div class="row">
         <div class="col-6 basics-col">    
-            <label class="col-2">Gender:</label>
-            <p class="border rounded p-2 m-1">M</p>
+            <label class="col-5">Gender:</label>
+            <p class="col-5 border rounded p-2 m-1 text-center">M</p>
         </div>
         <div class="col-6 basics-col">
-            <label class="col-2">Size:</label>
-            <p class="border rounded p-2 m-1">Medium</p>
+            <label class="col-5">Size:</label>
+            <p class="col-5 border rounded p-2 m-1 text-center">Medium</p>
         </div>
     </div>
 </section>
 <aside class="contain">
 <section class="attr">
-    <div class="table">
-        <h6>Attributes</h6>
-        <tbody>
-            <tr *ngFor="let attribute of attributes; index as i">
-                <td class="shadow">{{attribute.att_symbol}}<span>{{attribute.att_name}}</span></td>
-                <td  class="numbs"><p>{{attribute.att_amount}}</p></td>
-                <td class="numbs"><p>{{attribute.att_modifier}}</p></td>
+    <h6>Attributes</h6>
+    <div class="tb">
+        <div class="flex-between" >
+            <tr class="colm">
+                <td class="shadow" *ngFor="let attribute of attributes; index as i">
+                    <p>{{attribute.att_symbol}}<span>{{attribute.att_name}}</span></p>
+                </td>
             </tr>
-        </tbody>
+            <tr class="colm">
+                <td *ngFor="let attribute of attributes; index as i">
+                    <p class="numbs">{{attribute.att_amount}}</p>
+                </td>
+            </tr>
+                <tr class="colm">
+                <td *ngFor="let attribute of attributes; index as i"><p class="numbs">{{attribute.att_modifier}}</p></td>
+            </tr>
+        </div>
     </div>
 </section>
 <section class="chars">
@@ -126,6 +134,39 @@
             <h6>Speed</h6>
             <h6>Dak Side Points</h6>
         </tr>
+        <tr class="flex-spread">
+            <input class="smallBox" type="number" min="0">
+            <input class="smallBox" type="number" min="0">
+            <input class="smallBox" type="number" min="0">
+        </tr>      
+            <h6>Grapple</h6>       
+        <div class="grap flex-spread">
+            <tr class="grap_totals colm">
+                <p class="blank">blank</p>
+                <p class="numbs">{{grapple_total}}</p>       
+            </tr>
+            <tr class="grap_equation colm">
+                <p class="blank">blank</p>
+                <p>=</p>
+            </tr>
+            <tr class="grap_mod colm">
+                <p>Mod</p>
+                <select id="grapMod_type colm">
+                    <option value= "STR">STR</option>
+                    <option value="DEX">DEX</option>
+                </select>
+            </tr>
+            <tr class="colm">
+                <p class="blank">blank</p>
+                <p>+</p>
+            </tr>
+            <tr class="grap_misc colm">
+                <p>Misc</p>
+               <input class="smallBox" type="number">
+            </tr>
+                
+        </div>
+        
     </div>
 </section>
 </aside>
@@ -210,6 +251,7 @@
         </div>
         <div class="side2">
             <h6>Skills</h6>
+            <app-skills></app-skills>
         </div>
     </section>
 
