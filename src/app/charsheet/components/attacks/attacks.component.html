@@ -1,1 +1,72 @@
-<p>attacks works!</p>
+<section class="attacks">
+    <div claa="weapons">
+        <div *ngFor="let weapon of weapons; index as i" class="weapon">     
+        <tr>
+            <input class="medBox" type="text" name="weaponName" placeholder="Weapon Name" value="{{weapon.name}}">
+            <input class="medBox" type="text" name="weaponType" placeholder="Type" value="{{weapon.type}}">
+        </tr>
+        <tr>
+            <p class="blank double">blank</p>
+            <p>Total</p>
+            <p class="blank double">blank</p>
+            <p>Mod</p>
+            <p class="blank">blank</p>
+            <p>Misc</p>
+        </tr>
+        <tr>
+            <p class="shadow">Attack</p>
+            <p class="blank">blank</p>
+            <pre class="numbs">{{attack_total}}</pre>
+            <p class="blank">blank</p>
+            <span>|</span>
+            <select value="{{weapon.attack_mod}}" #attackMod (change)="calcModAttack(attackMod, attackMisc)" >
+                <option value= "STR">STR</option>
+                <option value="DEX">DEX</option>
+                <option value="CHA">CHA</option>
+            </select>
+            <span>+</span>
+            <input class="smallBox" type="number" min="0" #attackMisc value="{{weapon.attack_misc}}" (change)="calcMiscAttack(attackMisc, attackMod)">
+        </tr>
+        <tr>
+            <p class="shadow">Damage</p>
+            <input class="smallBox" type="text" value="{{weapon.damage}}">
+            <p>+</p>
+            <pre class="numbs">{{halfHeroicLevel}}</pre>
+            <span>|</span>
+            <select id="damageMod_type" value="{{weapon.damage_mod}}" >
+                <option value= "None">None</option>
+                <option value= "STR">STR</option>
+                <option value= "STRx2">STR×2</option>
+                <option value="DEX">DEX</option>
+                <option value="DEXx2">DEX×2</option>
+                <option value="CHA">CHA</option>
+                <option value="CHAx2">CHA×2</option>
+            </select>
+            <p>+</p>
+            <input class="smallBox" type="number" min="0" value="{{weapon.damage_misc}}">
+        </tr>
+        <tr class="crits">
+            <h5>Critical Info</h5>
+            <td>
+                <p>Range</p>
+                <input class="smallBox" type="number" min="0" placeholder="{{weapon.range}}">
+            </td>
+            <td>
+                <p>Multiplier</p>
+                <input class="smallBox" type="number" min="0" placeholder="{{weapon.critMult}}">
+            </td>
+        </tr>
+        <tr class="textbox"> 
+                <textarea id="attack_notes" name="attack_notes" rows="2" cols="100" placeholder="Attack Notes">{{weapon.attack_notes}}</textarea>            
+        </tr>
+        <tr class="textbox"> 
+            <textarea id="weapon_notes" name="weapon_notes" rows="2" cols="100" placeholder="Weapon Notes">{{weapon.weapon_notes}}</textarea>       
+    </tr>
+        </div>
+    </div>
+    
+    <div class="btns">
+        <button (click)="addAttack()" class="add">+Add</button>
+        <button (click)="modAttack()" class="edit">Modify</button>
+    </div>
+</section>

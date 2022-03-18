@@ -1,4 +1,6 @@
 
+
+
 .skills{
     display:flex;
     justify-content: space-evenly;
@@ -12,7 +14,16 @@ select{
     width: 3rem;
     max-height: 24px;     
 }
-
+.numbs{
+    text-align: center;
+    border: 1px solid black;
+    margin: .2rem 1rem;
+    padding:0 2rem;
+    display: flex;
+    align-items: center;
+    height: 24px;
+    color: rgb(192, 192, 192)
+}
 .blank{
     color:white;
 }
