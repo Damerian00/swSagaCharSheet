@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './charsheet/components/skills/skills.component';
 import { ArmorComponent } from './charsheet/components/armor/armor.component';
 import { AttacksComponent } from './charsheet/components/attacks/attacks.component';
+import { OptionsComponent } from './charsheet/components/options/options.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AttacksComponent } from './charsheet/components/attacks/attacks.compone
     HomeComponent,
     SkillsComponent,
     ArmorComponent,
-    AttacksComponent
+    AttacksComponent,
+    OptionsComponent
   ],
   imports: [
     BrowserModule,
