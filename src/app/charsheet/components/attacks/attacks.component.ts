@@ -28,8 +28,21 @@ const Weapons: Weapons[]=[
     attack_notes: "Point Blank Shot, Precise Shot, deadeye (miniaturized), retractable stock",
     weapon_notes: "S,A",
 
-  }
+  },
+  {
+    name: "Unarmed",
+    type: "Melee",
+    attack_mod: "STR",
+    attack_misc: 0,
+    damage: "1d4",
+    damage_mod: "None",
+    damage_misc: 0,
+    range: 0,
+    critMult: 2,
+    attack_notes: "",
+    weapon_notes: "",
 
+  }
 
 
 ]
@@ -55,6 +68,7 @@ attack_total:number = 0;
   }
 
 calcModAttack(event: any, misc: any){
+  console.log('mod.event', event.value, 'misc.value', misc.value);
   let mod = 0;
   if (event.value == "STR"){
     mod = this.str_mod;
@@ -68,6 +82,7 @@ calcModAttack(event: any, misc: any){
 }
 
 calcMiscAttack(misc: any, modifier: any){
+  console.log('mod.event', modifier.value, 'misc.value', misc.value);
   let mod = 0;
   if (modifier.value == "STR"){
     mod = this.str_mod;

@@ -11,6 +11,8 @@ import { SkillsComponent } from './charsheet/components/skills/skills.component'
 import { ArmorComponent } from './charsheet/components/armor/armor.component';
 import { AttacksComponent } from './charsheet/components/attacks/attacks.component';
 import { OptionsComponent } from './charsheet/components/options/options.component';
+import { PcComponent } from './charsheet/pages/pc/pc.component';
+import { NpcComponent } from './charsheet/pages/npc/npc.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { OptionsComponent } from './charsheet/components/options/options.compone
     SkillsComponent,
     ArmorComponent,
     AttacksComponent,
-    OptionsComponent
+    OptionsComponent,
+    PcComponent,
+    NpcComponent
   ],
   imports: [
     BrowserModule,
